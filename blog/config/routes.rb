@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :posts
-  root 'posts#index'
+  root 'posts#index_viewer'
+  post '/posts/:id/like' => 'posts#like'
+  post '/posts/:id/like2' => 'posts#like2'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

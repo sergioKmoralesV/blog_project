@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order(created_at: :desc)
   end
+
   def index_viewer
     @posts = Post.all.order(created_at: :desc)
   end
@@ -14,6 +15,24 @@ class PostsController < ApplicationController
   def show
   end
 
+  def like
+        @post = Post.find(params[:id])
+        @post.likes+=1
+    if @post.save
+        redirect_to @post
+    else
+        render "show"
+    end
+  end
+  def like2
+        @post = Post.find(params[:id])
+        @post.likes+=1
+    if @post.save
+        redirect_to "/"
+    else
+        render "show"
+    end
+  end
   # GET /posts/new
   def new
     @post = Post.new

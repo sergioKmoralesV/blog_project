@@ -11,12 +11,19 @@
 </dl>
 </div>
 
+<div class="container2"> 
+<dl class="dl-horizontal" align="right">
+<form action="/posts/<%=@post.id%>/like" method="post">
+ <button type="submit"  class="btn btn-primary btn-xs" align="right">Like   <span class="badge">
+  <%= @post.likes %></span></button>
+</form>
+</dl>
+</div>
+
 <br>
 <div class="container">  
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              posts_path, :class => 'btn btn-default'  %>
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_post_path(@post), :class => 'btn btn-default' %>
+<!--<%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn btn-default'  %>-->
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               post_path(@post),
               :method => 'delete',
