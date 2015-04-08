@@ -23,6 +23,9 @@
   <form action="/posts/search2" method="get" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="search">
+
+          <input type="text" class="form-control" placeholder="Category" name="category">
+
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
@@ -43,6 +46,8 @@
 <div class="container2"> 
 <dl class="dl-horizontal" align="right">
 <form action="/posts/<%=@post.id%>/like" method="post">
+
+ <h6><b>Category:</b><i> <%= @post.category %></h6></i>
  <button type="submit"  class="btn btn-primary btn-xs" align="right">Like   <span class="badge">
   <%= @post.likes %></span></button>
 </form>
@@ -83,7 +88,7 @@
 <!--<%= link_to t('.back', :default => t("helpers.links.back")),
               posts_path, :class => 'btn btn-default'  %>-->
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              post_path(@post),
+              posts_path,
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     if params[:search]==nil 
          @posts = Post.all.order(created_at: :desc)
     else
-         @posts = Post.where("description LIKE '%#{params[:search]}%' OR title LIKE '%#{params[:search]}%'").order(created_at: :desc)
+         @posts = Post.where("(description LIKE '%#{params[:search]}%' OR title LIKE '%#{params[:search]}%') AND category ='#{params[:category]}'").order(created_at: :desc)
     end
   end
   def report
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
          @posts = Post.all.order(created_at: :desc)
     else
 
-         @posts = Post.where("description LIKE '%#{params[:search]}%' OR title LIKE '%#{params[:search]}%'").order(created_at: :desc)
+         @posts = Post.where("(description LIKE '%#{params[:search]}%' OR title LIKE '%#{params[:search]}%') AND category ='#{params[:category]}'").order(created_at: :desc)
     end
   end
   # GET /posts/1
@@ -59,6 +59,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.likes=0
+    @post.user_id=1
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -87,6 +88,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
@@ -102,6 +104,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description)
+      params.require(:post).permit(:title, :description, :category)
     end
 end

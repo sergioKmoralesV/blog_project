@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/posts/report' => 'posts#report'
   get '/posts/search' => 'posts#index'
   get '/posts/search2' => 'posts#index_viewer'
+  
   resources :posts
   
   # The priority is based upon order of creation: first created -> highest priority.
