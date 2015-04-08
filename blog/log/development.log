@@ -24729,3 +24729,194 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
   Rendered posts/index.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-04-08 12:02:09 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (53.2ms)
+  Rendered posts/new.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 144ms (Views: 143.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-08 12:03:12 -0400
+Processing by PostsController#index_viewer as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index_viewer.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:12 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:12 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:12 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:12 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:12 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:12 -0400
+
+
+Started GET "/" for ::1 at 2015-04-08 12:03:31 -0400
+Processing by PostsController#index_viewer as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered posts/index_viewer.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:31 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:31 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:31 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:31 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:31 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:31 -0400
+
+
+Started GET "/posts" for ::1 at 2015-04-08 12:03:32 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:32 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:32 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:32 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:32 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:32 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:32 -0400
+
+
+Started GET "/posts/report" for ::1 at 2015-04-08 12:03:33 -0400
+Processing by PostsController#report as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [[nil, 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [[nil, 9]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [[nil, 8]]
+  Rendered posts/report.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:33 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:33 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:33 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:33 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:33 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:33 -0400
+
+
+Started GET "/posts/report" for ::1 at 2015-04-08 12:03:34 -0400
+Processing by PostsController#report as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [[nil, 10]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [[nil, 9]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [[nil, 8]]
+  Rendered posts/report.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:34 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:34 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:34 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:34 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:34 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:34 -0400
+
+
+Started GET "/" for ::1 at 2015-04-08 12:03:35 -0400
+Processing by PostsController#index_viewer as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered posts/index_viewer.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:35 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:35 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:35 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:35 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:35 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:35 -0400
+
+
+Started GET "/posts/report" for ::1 at 2015-04-08 12:03:36 -0400
+Processing by PostsController#report as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [[nil, 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [[nil, 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [[nil, 8]]
+  Rendered posts/report.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome-74619dc948ed22c8c73f8a012bc352b1.css?body=1" for ::1 at 2015-04-08 12:03:36 -0400
+
+
+Started GET "/assets/application-165bb28986a5177a1e68dd7a6b0dd679.css?body=1" for ::1 at 2015-04-08 12:03:36 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides-5a7e984b8bdf1fa503c1d369eb50c2bd.css?body=1" for ::1 at 2015-04-08 12:03:36 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap-3d4ac324e8c8a16c343c471da829ffcc.css?body=1" for ::1 at 2015-04-08 12:03:36 -0400
+
+
+Started GET "/assets/scaffolds-4dae27ed2b6dcc82e9b10e024c02e7a6.css?body=1" for ::1 at 2015-04-08 12:03:36 -0400
+
+
+Started GET "/assets/posts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 12:03:36 -0400
