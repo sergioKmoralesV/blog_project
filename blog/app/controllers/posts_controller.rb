@@ -4,15 +4,27 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    if params[:search]==nil 
+         @posts = Post.all.order(created_at: :desc)
+    else
+         @posts = Post.where("description LIKE '%#{params[:search]}%' OR title LIKE '%#{params[:search]}%'").order(created_at: :desc)
+    end
+  end
+  def report
     @posts = Post.all.order(created_at: :desc)
   end
-
   def index_viewer
-    @posts = Post.all.order(created_at: :desc)
+    if params[:search]==nil 
+         @posts = Post.all.order(created_at: :desc)
+    else
+
+         @posts = Post.where("description LIKE '%#{params[:search]}%' OR title LIKE '%#{params[:search]}%'").order(created_at: :desc)
+    end
   end
   # GET /posts/1
   # GET /posts/1.json
   def show
+
   end
 
   def like
