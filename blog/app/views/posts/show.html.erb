@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand">
-        Blog
+        Blog Personal
       </a>
     </div>
     <ul class="nav navbar-nav">
@@ -57,7 +57,7 @@
   <% @post.comments.order(created_at: :desc).each do |comment| %>
       <tr>
         <td><%= comment.content %></a></td>
-        <td><i><%= comment.created_at.to_date %></i></td>
+        <td><small><i><%= comment.created_at.to_date %></i></small></td>
       </tr>
     <% end %>
 </table>
